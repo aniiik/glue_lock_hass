@@ -9,10 +9,6 @@
 
 [![hacs][hacsbadge]][hacs]
 [![Project Maintenance][maintenance-shield]][user_profile]
-[![BuyMeCoffee][buymecoffeebadge]][buymecoffee]
-
-[![Discord][discord-shield]][discord]
-[![Community Forum][forum-shield]][forum]
 
 **TO BE REMOVED: If you need help, as a developer, to use this custom component tempalte,
 please look at the [User Guide in the Cookiecutter documentation](https://cookiecutter-homeassistant-custom-component.readthedocs.io/en/stable/quickstart.html)**
@@ -21,13 +17,12 @@ please look at the [User Guide in the Cookiecutter documentation](https://cookie
 
 | Platform        | Description                                                               |
 | --------------- | ------------------------------------------------------------------------- |
-| `binary_sensor` | Show something `True` or `False`.                                         |
-| `sensor`        | Show info from Glue lock API. |
-| `switch`        | Switch something `True` or `False`.                                       |
+| `sensor`        | Current battery status |
+| `button`        | Two buttons used for locking or unlocking |
 
-![example][exampleimg]
+Please note that I only had the first generation lock which did not have the lock status. If you have an newer lock with lock status available in your app and want to have it implemented. Please open an issue so we can investigate the API response for the lock status or if you want to can contribute yourself :)
 
-## Installation
+## Manual installation
 
 1. Using the tool of choice open the directory (folder) for your HA configuration (where you find `configuration.yaml`).
 2. If you do not have a `custom_components` directory (folder) there, you need to create it.
@@ -37,29 +32,18 @@ please look at the [User Guide in the Cookiecutter documentation](https://cookie
 6. Restart Home Assistant
 7. In the HA UI go to "Configuration" -> "Integrations" click "+" and search for "Glue lock"
 
-Using your HA configuration directory (folder) as a starting point you should now also have this:
-
-```text
-custom_components/glue_lock/translations/en.json
-custom_components/glue_lock/translations/fr.json
-custom_components/glue_lock/translations/nb.json
-custom_components/glue_lock/translations/sensor.en.json
-custom_components/glue_lock/translations/sensor.fr.json
-custom_components/glue_lock/translations/sensor.nb.json
-custom_components/glue_lock/translations/sensor.nb.json
-custom_components/glue_lock/__init__.py
-custom_components/glue_lock/api.py
-custom_components/glue_lock/binary_sensor.py
-custom_components/glue_lock/config_flow.py
-custom_components/glue_lock/const.py
-custom_components/glue_lock/manifest.json
-custom_components/glue_lock/sensor.py
-custom_components/glue_lock/switch.py
-```
 
 ## Configuration is done in the UI
 
-<!---->
+1. Enter your credentials (Same as the one you use in your mobile application)
+
+![Enter credentials](images/image.png)
+
+2. Select the lock you want to setup in HA (List is populated automatically after login and shows all your glue locks that you have)
+
+![Select lock](images/image-1.png)
+
+3. Setup is done! 
 
 ## Contributions are welcome!
 
@@ -78,8 +62,8 @@ Code template was mainly taken from [@Ludeeus](https://github.com/ludeeus)'s [in
 [black-shield]: https://img.shields.io/badge/code%20style-black-000000.svg?style=for-the-badge
 [buymecoffee]: https://www.buymeacoffee.com/aniiik
 [buymecoffeebadge]: https://img.shields.io/badge/buy%20me%20a%20coffee-donate-yellow.svg?style=for-the-badge
-[commits-shield]: https://img.shields.io/github/commit-activity/y/aniiik/glue-lock.svg?style=for-the-badge
-[commits]: https://github.com/aniiik/glue-lock/commits/main
+[commits-shield]: https://img.shields.io/github/commit-activity/y/aniiik/glue_lock_hass.svg?style=for-the-badge
+[commits]: https://github.com/aniiik/glue_lock_hass/commits/main
 [hacs]: https://hacs.xyz
 [hacsbadge]: https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge
 [discord]: https://discord.gg/Qa5fW2R
@@ -87,10 +71,10 @@ Code template was mainly taken from [@Ludeeus](https://github.com/ludeeus)'s [in
 [exampleimg]: example.png
 [forum-shield]: https://img.shields.io/badge/community-forum-brightgreen.svg?style=for-the-badge
 [forum]: https://community.home-assistant.io/
-[license-shield]: https://img.shields.io/github/license/aniiik/glue-lock.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/aniiik/glue_lock_hass.svg?style=for-the-badge
 [maintenance-shield]: https://img.shields.io/badge/maintainer-%40aniiik-blue.svg?style=for-the-badge
 [pre-commit]: https://github.com/pre-commit/pre-commit
 [pre-commit-shield]: https://img.shields.io/badge/pre--commit-enabled-brightgreen?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/aniiik/glue-lock.svg?style=for-the-badge
-[releases]: https://github.com/aniiik/glue-lock/releases
+[releases-shield]: https://img.shields.io/github/release/aniiik/glue_lock_hass.svg?style=for-the-badge
+[releases]: https://github.com/aniiik/glue_lock_hass/releases
 [user_profile]: https://github.com/aniiik
