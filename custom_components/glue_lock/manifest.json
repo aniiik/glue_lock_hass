@@ -1,0 +1,16 @@
+{
+  "domain": "glue_lock",
+  "name": "Glue Lock",
+  "codeowners": [
+    "@aniiik"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/aniiik/glue_lock_hass",
+  "homekit": {},
+  "iot_class": "cloud_push",
+  "requirements": ["pygluelock==0.3.0"],
+  "ssdp": [],
+  "zeroconf": [],
+  "version": "0.1.0"
+}
